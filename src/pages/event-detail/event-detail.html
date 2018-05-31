@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Event Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col col-4> Nama Event </ion-col>
+    <ion-col col-8>
+      <strong>{{currentEvent?.name}}</strong>
+    </ion-col>
+  </ion-row>
+  <ion-card>
+    <ion-card-header>
+      <p>Detail Event</p>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Harga Event :
+        <strong>{{currentEvent?.price}}</strong>
+      </p>
+      <p>Tanggal Event :
+        <strong>{{currentEvent?.date}}</strong>
+      </p>
+      <p>Contact Person :
+        <strong>{{currentEvent?.contact}}</strong>
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

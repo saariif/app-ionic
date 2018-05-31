@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>List Semua Event</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-item *ngFor="let event of eventList" 
+      (click)="goToEventDetail(event.id)">
+        <h2>{{event?.name}}</h2>
+        <p>harga Event :</p>
+          <strong>Rp. {{event?.price}}</strong>
+      </ion-item>
+  </ion-list>
+</ion-content>

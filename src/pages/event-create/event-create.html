@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Membuat Event Baru</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>Nama Event</ion-label>
+    <ion-input [(ngModel)]="eventName" type="text" 
+    placeholder="Isikan nama event" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label stacked>Harga Event</ion-label>
+      <ion-input [(ngModel)]="eventPrice" type="number" 
+      placeholder="Isikan harga event" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label stacked>Tanggal Event</ion-label>
+      <ion-datetime [(ngModel)]="eventDate" displayFormat="D MMM YY"
+      pickerFormat="DD MMMM YYYY"
+      ></ion-datetime>
+  </ion-item>
+  <ion-item>
+      <ion-label stacked>Contact Person</ion-label>
+      <ion-input [(ngModel)]="eventContact" type="number" 
+      placeholder="Isikan contact person" required></ion-input>
+  </ion-item>
+
+  <button ion-button block outline color="primary"
+  (click)="createEvent(eventName, eventPrice, eventDate, eventContact)">
+    Buat Event Baru
+  </button>
+</ion-content>
